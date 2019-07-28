@@ -1,7 +1,7 @@
 
 def highest_rating
-  show = Show.maximum(:rating)
-  show
+  Show.maximum(:rating)
+  
 end
 
 def most_popular_show
@@ -20,6 +20,7 @@ def least_popular_show
 end
 
 def ratings_sum
+  Show.sum(:rating)
 end
 
 def popular_shows

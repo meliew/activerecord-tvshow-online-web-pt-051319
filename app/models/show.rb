@@ -6,7 +6,7 @@ class Show < ActiveRecord::Base
 
   def Show::most_popular_show
     Show.order(rating: :desc).first
-    
+
   end
 
   def Show::lowest_rating
@@ -25,6 +25,7 @@ class Show < ActiveRecord::Base
 
   def Show::popular_shows
     #returns an array of all shows with a rating above 5
+    Show.where("rating > ?", 5)
   end
 
   def Show::shows_by_alphabetical_order

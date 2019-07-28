@@ -29,6 +29,7 @@ class Show < ActiveRecord::Base
 
   def Show::shows_by_alphabetical_order
     #returns an array of all shows, listed in alphabetical order
+    Show.order(:name)
 
   end
 
